@@ -1,23 +1,15 @@
 package automation.task1;
 
-import com.beust.ah.A;
 import com.google.gson.Gson;
 import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.time.Duration;
 import java.util.ArrayList;
 
 public class screenscraper {
@@ -57,7 +49,7 @@ public class screenscraper {
 
         String postedBy = "bb59b5de-29c0-44a1-9788-d3f03719a886";
         WebDriver driver;
-        System.setProperty("webdriver.chrome.driver","/home/miriana/webdrivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","/Users/mirianadrago/webdrivers/chromedriver.exe");
         driver = new ChromeDriver();
         //1. visiting the website used for screen scraping
 
@@ -159,7 +151,7 @@ public class screenscraper {
                     postedBy,
                     price);
             addAlert(newAlert);
-            sendRequest(newAlert);
+            //sendRequest(newAlert);
             //navigates back to the results page
             driver.navigate().back();
         }
